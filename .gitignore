@@ -11,6 +11,7 @@ __pycache__/
 venv/
 ENV/
 env/
+tumor_env/
 
 ### Packaging / build
 build/
@@ -89,4 +90,3 @@ data/external/
 ### Temporary
 *.tmp
 *.temp
-
