@@ -1,0 +1,92 @@
+
+### Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.Python
+
+### Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+### Packaging / build
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+### Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+### Type checking
+.mypy_cache/
+.pyre/
+.pytype/
+
+### Jupyter
+.ipynb_checkpoints/
+
+### Logs
+*.log
+logs/
+
+### OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.idea/
+.vscode/
+*.swp
+*.swo
+
+### Environment / secrets
+.env
+.env.*
+
+### ML artifacts (checkpoints, runs, outputs)
+checkpoints/
+results/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+tensorboard/
+
+*.ckpt
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.onnx
+*.tflite
+
+### Data
+data/raw/
+data/processed/
+data/interim/
+data/external/
+
+*.nii
+*.nii.gz
+*.mha
+*.mhd
+*.nrrd
+*.dcm
+
+*.npy
+*.npz
+
+### Temporary
+*.tmp
+*.temp
+
