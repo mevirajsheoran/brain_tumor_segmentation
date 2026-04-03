@@ -1,0 +1,7 @@
+Paper,Year,Title,Model,Dataset,Dice Score,IoU Score,Loss Function,Key Contribution,Limitations
+Ronneberger et al.,2015,U-Net: Convolutional Networks for Biomedical Image Segmentation,U-Net,ISBI Cell Tracking,0.920,0.853,Cross Entropy + Weight Map,Skip connections for precise localization,No attention mechanism; 2D only
+Oktay et al.,2018,Attention U-Net: Learning Where to Look for the Pancreas,Attention U-Net,CT Abdomen,0.847,0.735,Dice Loss,Attention gates to focus on relevant regions,Increased parameters and training time
+Isensee et al.,2021,nnU-Net: A Self-configuring Method for Deep Learning-based Biomedical Image Segmentation,nnU-Net,BraTS 2020,0.885,0.793,Dice + Cross Entropy,Auto-configured pipeline achieving state-of-the-art,Complex framework; not interpretable
+Myronenko,2019,3D MRI Brain Tumor Segmentation Using Autoencoder Regularization,3D Encoder-Decoder + VAE,BraTS 2018,0.884,0.792,Dice + L2 + KL Divergence,BraTS 2018 winner; VAE regularization prevents overfitting,Requires high GPU memory for 3D processing
+This Project,2024,Brain Tumor Segmentation using U-Net and Attention U-Net,U-Net,BraTS 2020 (80 patients),0.764,0.688,Dice + BCE,Comparison study with interactive web application,2D only; limited training data (80 patients)
+This Project,2024,Brain Tumor Segmentation using U-Net and Attention U-Net,Attention U-Net,BraTS 2020 (80 patients),0.757,0.683,Dice + BCE,Attention gates for focused segmentation,Slight overfitting due to more parameters
