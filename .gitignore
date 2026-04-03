@@ -1,19 +1,26 @@
+# File: .gitignore
 
-### Python
+# ============================================================
+# PYTHON
+# ============================================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.pyd
 .Python
 
-### Virtual environments
-.venv/
-venv/
-ENV/
-env/
+# ============================================================
+# VIRTUAL ENVIRONMENTS
+# ============================================================
 tumor_env/
+venv/
+.venv/
+env/
+ENV/
 
-### Packaging / build
+# ============================================================
+# PACKAGING / BUILD
+# ============================================================
 build/
 dist/
 .eggs/
@@ -21,62 +28,62 @@ dist/
 *.egg
 pip-wheel-metadata/
 
-### Test / coverage
+# ============================================================
+# TESTING
+# ============================================================
 .pytest_cache/
 .coverage
 .coverage.*
 coverage.xml
 htmlcov/
 
-### Type checking
+# ============================================================
+# TYPE CHECKING
+# ============================================================
 .mypy_cache/
 .pyre/
 .pytype/
 
-### Jupyter
+# ============================================================
+# JUPYTER
+# ============================================================
 .ipynb_checkpoints/
 
-### Logs
+# ============================================================
+# LOGS
+# ============================================================
 *.log
 logs/
 
-### OS / editor
+# ============================================================
+# OS / EDITOR
+# ============================================================
 .DS_Store
 Thumbs.db
 desktop.ini
-
 .idea/
 .vscode/
 *.swp
 *.swo
 
-### Environment / secrets
+# ============================================================
+# ENVIRONMENT / SECRETS
+# ============================================================
 .env
 .env.*
 
-### ML artifacts (checkpoints, runs, outputs)
-checkpoints/
-results/
-runs/
-wandb/
-mlruns/
-lightning_logs/
-tensorboard/
-
-*.ckpt
-*.pth
-*.pt
-*.h5
-*.hdf5
-*.onnx
-*.tflite
-
-### Data
+# ============================================================
+# DATA — Raw dataset is 4GB, NEVER upload
+# Processed .npy files are 700MB, too large for GitHub
+# ============================================================
 data/raw/
 data/processed/
 data/interim/
 data/external/
 
+# ============================================================
+# MEDICAL IMAGE FORMATS
+# ============================================================
 *.nii
 *.nii.gz
 *.mha
@@ -84,9 +91,54 @@ data/external/
 *.nrrd
 *.dcm
 
+# ============================================================
+# NUMPY DATA FILES
+# ============================================================
 *.npy
 *.npz
+*.pkl
 
-### Temporary
+# ============================================================
+# MODEL CHECKPOINTS — Too large for GitHub (120MB each)
+# Upload to Google Drive and share links in README
+# ============================================================
+checkpoints/*.pth
+checkpoints/*.pt
+checkpoints/*.ckpt
+checkpoints/*.h5
+checkpoints/*.hdf5
+checkpoints/*.onnx
+checkpoints/*.tflite
+checkpoints/unet/
+checkpoints/attention_unet/
+
+# Keep results_summary.json (small, useful)
+!checkpoints/results_summary.json
+
+# ============================================================
+# ML TRACKING
+# ============================================================
+runs/
+wandb/
+mlruns/
+lightning_logs/
+tensorboard/
+
+# ============================================================
+# TEMPORARY / DEBUG FILES
+# ============================================================
 *.tmp
 *.temp
+check_model_keys.py
+test_app_imports.py
+test_loading.py
+verify_models.py
+verify_setup.py
+extract_dataset.py
+
+
+docs/build.md 
+docs/stepUpteam.md 
+
+
+presentation.txt
