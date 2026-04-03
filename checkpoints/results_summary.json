@@ -1,0 +1,24 @@
+{
+  "UNet": {
+    "best_val_dice": 0.8106,
+    "test_dice": 0.7643477433837239,
+    "test_dice_std": 0.28109146863065265,
+    "test_iou": 0.6884267225416817,
+    "test_precision": 0.8674585213466139,
+    "test_recall": 0.772922230356509,
+    "test_accuracy": 0.9897066609243329,
+    "training_time_min": 40.7,
+    "epochs_trained": 35
+  },
+  "AttentionUNet": {
+    "best_val_dice": 0.8181,
+    "test_dice": 0.757243233489061,
+    "test_dice_std": 0.28998569692518505,
+    "test_iou": 0.6826021911377569,
+    "test_precision": 0.8681177639287342,
+    "test_recall": 0.7725126409489829,
+    "test_accuracy": 0.9896258064870084,
+    "training_time_min": 56.5,
+    "epochs_trained": 43
+  }
+}
